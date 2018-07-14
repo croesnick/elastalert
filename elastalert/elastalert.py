@@ -463,7 +463,8 @@ class ElastAlerter():
         if qk:
             filter_key = rule['query_key']
             if rule['five']:
-                end = '.keyword'
+                #end = '.keyword'
+                end = '.raw'
             else:
                 end = '.raw'
             if rule.get('raw_count_keys', True) and not rule['query_key'].endswith(end):
@@ -904,7 +905,8 @@ class ElastAlerter():
             if self.string_multi_field_name:
                 string_multi_field_name = self.string_multi_field_name
             elif self.is_atleastfive():
-                string_multi_field_name = '.keyword'
+                # string_multi_field_name = '.keyword'
+                string_multi_field_name = '.raw'
             else:
                 string_multi_field_name = '.raw'
 
