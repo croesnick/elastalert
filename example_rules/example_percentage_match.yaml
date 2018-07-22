@@ -14,7 +14,8 @@ filter:
 buffer_time:
   minutes: 5
 
-query_key: Hostname.keyword
+# query_key: hostname.keyword
+query_key: hostname.raw
 doc_type: http_request
 
 match_bucket_filter:
